@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Gussail 🎉</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom right, #ffccf9, #caffbf);
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3em;
+      margin-top: 1em;
+      color: #ff69b4;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 1em auto;
+      max-width: 90%;
+      color: #444;
+    }
+
+    img {
+      width: 250px;
+      margin: 1em auto;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(255, 105, 180, 0.4);
+    }
+
+    .confetti {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+    }
+
+    audio {
+      margin-top: 1em;
+    }
+
+    button {
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 12px 24px;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    .surprise, .letter {
+      display: none;
+      margin-top: 20px;
+      animation: popIn 1s ease-out forwards;
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    .heart {
+      font-size: 3em;
+      color: #ff69b4;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    .letter-text {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.4em;
+      color: #ff4081;
+      background-color: #fff0f5;
+      margin: 20px auto;
+      max-width: 90%;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(255, 192, 203, 0.5);
+    }
+
+    .bubu-img {
+      width: 180px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <canvas class="confetti"></canvas>
+
+  <h1>🎉 Happy Birthday Gussail! 🎂</h1>
+
+  <img src="https://media.tenor.com/m0_8jBqxiEwAAAAj/tkthao219-bubududu.gif" alt="Bubu Dudu GIF">
+
+  <p>To my dear <strong>Kashmiri seb</strong>,<br>
+     You are the cutest thing after Bubu Dudu 💖 <br>
+     Wishing you a day full of smiles, pink clouds, and teddy hugs 🧸<br>
+     May every moment ahead be filled with joy, love, and cake! 🎂✨</p>
+
+
+
+  <!-- Surprise Button -->
+  <button onclick="revealSurprise()">Click for Surprise 💝</button>
+
+  <!-- Surprise Message -->
+  <div class="surprise" id="surprise">
+    <div class="heart">🎂s</div>
+    <p><strong>Surprise! 🎉</strong><br>
+    May Allah give you patience, strength and clarity.<br>
+    Your anger makes you look more naati, dedh futiya, and being part of your birthday makes me the luckiest.<br>
+    Here's to you, my Gussail – the queen of cute, chaos, and charm. 💞</p>
+
+    <button onclick="revealLetter()">Reveal Letter from Bubu Dudu 💌</button>
+  </div>
+
+  <!-- Second Surprise: Bubu Dudu's Letter -->
+  <div class="letter" id="letter">
+    <img class="bubu-img" src="https://media1.tenor.com/m/KHo4lZ-iCEUAAAAC/tkthao219-bubududu.gif" alt="Bubu Dudu">
+    <div class="letter-text">
+      Hiii my cutest Gussail 💕,<br><br>
+      This is Bubu Dudu speaking 🧸 — I sneaked in here to whisper that you are the most lovable human ever!<br>
+      Stay adorable, stay emotional, and always keep smiling just like today.<br><br>Please dont stop using my stickers with Asif, keep him irritating with my stickers he hates me!<br><br>
+      With snuggles and pink love,<br>
+      — Bubu Dudu 💌
+    </div>
+  </div>
+
+  <!-- Surprise Sound -->
+  <audio id="surprise-sound">
+    <source src="https://dl.sndup.net/dwt7/magic-chime.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Confetti JS -->
+  <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
+  <script>
+    const confettiSettings = { target: 'confetti' };
+    const confetti = new ConfettiGenerator(confettiSettings);
+    confetti.render();
+
+    function revealSurprise() {
+      document.getElementById('surprise').style.display = 'block';
+      document.getElementById('surprise-sound').play();
+    }
+
+    function revealLetter() {
+      document.getElementById('letter').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
